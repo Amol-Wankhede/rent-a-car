@@ -1,0 +1,63 @@
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Users / Customers</h3>
+                        <ul>
+                            <li><a href="view-users.jsp">View user accounts</a></li>
+                            <li><a href="maintain-users.jsp">Maintain customer accounts</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Cars info</h3>
+                        <ul>
+                            <li><a href="add-car.jsp">Add car info</a></li>
+                            <li><a href="modify-car.jsp">Modify car info</a></li>
+                            <li><a href="remove-car.jsp">Remove car info</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Rental</h3>
+                        <ul>
+                            <li><a href="accept-request.jsp">Accept requests</a></li>
+                            <li><a href="reject-request.jsp">Reject requests</a></li>
+                            <li><a href="view-requests.jsp">View all requests</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Reports</h3>
+                        <ul>
+                            <li><a href="available-cars.jsp">Available cars</a></li>
+                            <li><a href="rented-cars.jsp">Rented cars</a></li>
+                            <li><a href="registered-customers.jsp">Registered customers</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016 <a target="_blank" href="http://ntec.ac.nz/" title="Ntec Java Project GradDip IT">ASK Java</a> by Amol, Kaushal &amp; Siddu
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li>Administrator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->

@@ -1,3 +1,8 @@
+Rent a car
+----------
+
+> An online booking application which allows customers to make an online request to rent a car.
+
 **User**
  - user registration `register.jsp` 
  - login `login.jsp` 

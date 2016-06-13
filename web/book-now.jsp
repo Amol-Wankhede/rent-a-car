@@ -51,27 +51,20 @@
                             <div class="row">
                                 <div class="form-group col-md-3">
                                     <label>Date From</label>
-                                    <div class='input-group date' id='dateFrom'>
-                                        <input type='text' name="from" class="form-control" />
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                    <div class='input-group date'>
+                                        <input type='date' name="from" id="dateFrom" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label>Date To</label>
-                                    <div class='input-group date' id='dateTo'>
-                                        <input type='text' name="to" id="datex" class="form-control" />
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                    <label>Number of days</label>
+                                    <div class='input-group'>
+                                        <input type='number' name="to" id="dateTo" max="2016-12-31" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Rent</label>
-                                    <div class='input-group date'>
-                                        <input type='text' class="form-control" id="rent" name="rent" 
-                                               value="<%= c.getRentalPrice()%>" readonly="readonly" />
+                                    <div class='input-group'>
+                                        <input type='text' class="form-control" id="rent" name="rent" value="<%= c.getRentalPrice()%>" readonly="readonly" /> 
                                     </div>
                                 </div>
                             </div>
@@ -89,12 +82,24 @@
     </section>
     <%@ include file="footer.jsp" %>
     <script src="js/jquery.js"></script>
-    <!--<script src="js/moment.min.js"></script>-->
+    <script src="js/moment.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <!--<script src="js/bootstrap-datetimepicker.js"></script>-->
+    <script type="text/javascript">
+    $(function() {
+        var now = moment();
+        console.log(now.date());
+        console.log(now.month());
+        console.log(now.year());
+        $("#dateFrom").attr( {
+            "min": now.year() + "-" + (now.month()+2) + "-" +now.date()
+        });
+    });
+    $("#dateFrom").
+    </script>
 </body>
 </html>
