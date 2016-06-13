@@ -35,3 +35,53 @@ Rent a car
 	- Rented cars `rented-cars.jsp`
 	- List of Registered users `registered-users.jsp`
 - Feebacks
+
+
+Database
+----------
+
+**Car**
+- `regNo`
+- `carType`
+- `carImage`
+- `description`
+- `rentalPrice`
+- `active` Active / In-Active
+
+**Customer**
+- `cid`
+- `totalAmount`
+- `payDate`
+- `userId`
+
+**Enquiry**
+- `enquiryId`
+- `userId`
+- `type`
+- `message`
+- `status` Pending / Replied / Resolved
+
+**RentalRequest**
+- `requestId`
+- `userId`
+- `regNo`
+- `dateRequested`
+- `dateFrom`
+- `dateTo`
+- `status` Accepted / Declined
+- `message`
+
+**Staff**
+- `staffId`
+- `staffType` Admin / Staff
+- `userId`
+
+**User**
+- `userId`
+- `name`
+- `email`
+- `address`
+- `city`
+- `phone`
+- `pwd`
+- `active` Active / In-Active
