@@ -55,14 +55,19 @@
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <strong> Exception:</strong> Exception in executing SQL query
                 </div>
-                <% } // If everything is okay ie Email and password match
+                <% } else if (str == "exception") { %>
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <strong> Alert:</strong> You account has been deactivated by Administrator
+                </div>
+                <% } 
                     else { %>
                 <div class="alert alert-success" role="alert">
                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     <strong> Success:</strong> You have been successfully logged-in !
                     <%
                         // Create session by setting session variable username to current user name
-                        session.setAttribute("username", str);
+                        session.setAttribute("userid", str);
                     }%>
                 </div>                 
             </div>

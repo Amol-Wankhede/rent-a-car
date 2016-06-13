@@ -18,7 +18,7 @@
                         <ul>
                             <li><a href="register.jsp">Register</a></li>
                             <li><a href="login.jsp">Login</a></li>
-                            <li><a href="view-cars.jsp">View cars</a></li>
+                            <li><a href="view-cars.jsp?cars=all">All Cars</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -38,9 +38,9 @@
                     <div class="widget">
                         <h3>Cars</h3>
                         <ul>
-                            <li><a href="view-cars.jsp">Hatchback</a></li>
-                            <li><a href="view-cars.jsp">Sedan</a></li>
-                            <li><a href="view-cars.jsp">Van</a></li>
+                            <li><a href="view-cars.jsp?cars=luxary">Luxary</a></li>
+                            <li><a href="view-cars.jsp?cars=premium">Premium</a></li>
+                            <li><a href="view-cars.jsp?cars=intermediate">Intermediate</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->

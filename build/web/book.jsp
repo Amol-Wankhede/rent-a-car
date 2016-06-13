@@ -34,16 +34,31 @@
         <section id="blog" class="container">
             <div class="center">
                 <h2>Book</h2>
-                <p class="lead">Confirm booking</p>
+                <p class="lead">Booking process</p>
             </div>
-                <jsp:useBean id="bean" class="rentalCar.RentalRequest"/>
+            <jsp:useBean id="bean" class="rentalCar.RentalRequest"/>
             <div class="blog">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Book </h1> 
+                        <% if (session.getAttribute("userid") != null) {%>
+                       <!--  <%= request.getParameter("from")%><br>
+                        <%= request.getParameter("days")%><br>
                         <%= request.getParameter("rent")%><br>
-                        <%= request.getParameter("from")%><br>
-                        <%= request.getParameter("to")%>
+                        <%= request.getParameter("totalrent")%><br> -->
+                        <jsp:setProperty name="bean" property="userId" value="10"/>
+                        <jsp:setProperty name="bean" property="dateFrom" value="10"/>
+                        <jsp:setProperty name="bean" property="userId" value="10"/>
+                        <jsp:setProperty name="bean" property="regNo" value="10"/>
+
+                        <h4>Your booking has been submitted to the company</h4>
+                        <h4>Once approved you will receive email</h4>
+                        <% } else { %>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <strong> Please login: </strong> You must be logged-in to book car!
+                        </div>                           
+                        <% }%>
+
                     </div><!--/.col-md-8-->
                 </div><!--/.row-->
             </div>

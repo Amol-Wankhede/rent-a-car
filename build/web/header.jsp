@@ -13,7 +13,7 @@
                 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li><a href="index.jsp">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">View Cars <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -26,8 +26,11 @@
                             </ul>
                         </li>
                         <li><a href="contact.jsp">Contact</a></li>                        
-                        <li><a href="book-now.jsp" class="btn btn-secondary">Book Now</a></li>
-                        <li><a href="login.jsp" class="btn btn-warning">Login</a></li>
+                        <% if(session.getAttribute("userid") != null) { %>
+                            <li><a href="logout.jsp" class="btn btn-primary">Logout</a></li>
+                        <% } else { %>
+                            <li><a href="login.jsp" class="btn btn-warning">Login</a></li>
+                        <% } %>
                     </ul>
                 </div>
             </div><!--/.container-->

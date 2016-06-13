@@ -37,9 +37,10 @@ public class LoginDao {
             if(rs.next()) {
                 // Result set will contain string in following numbers
                 // 1 - id, 2 - name, 3 - password, 4- email, 5 - country
-                returnString = rs.getString(8); // Stores name of the user in returnString
-                if(returnString.equals("In-Active"))
-                    returnString = "<p>You account has been deactivated by Administrator</p>";
+                if(rs.getString(8).equals("In-Active"))
+                    returnString = rs.getString(8);
+                else
+                    returnString = String.valueOf(rs.getInt(1));
             } else {
                 returnString = "error";
             }

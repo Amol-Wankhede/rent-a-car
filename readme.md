@@ -1,7 +1,7 @@
 Rent a car
 ----------
 
-> An online booking application which allows customers to make an online request to rent a car.
+> An online booking application which allows customers to make an online request to rent a car. 
 
 **User**
  - user registration `register.jsp` 
@@ -31,7 +31,7 @@ Rent a car
 	- Select car to remove
 - Rental request `rental-requests.jsp`
 - Reports `reports.jsp`
-- Available cars `available-cars.jsp`
-- Rented cars `rented-cars.jsp`
-- List of Registered users `registered-users.jsp`
+	- Available cars `available-cars.jsp`
+	- Rented cars `rented-cars.jsp`
+	- List of Registered users `registered-users.jsp`
 - Feebacks
