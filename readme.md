@@ -30,12 +30,16 @@ Rent a car
 	- Show all cars
 	- Select car to remove
 - Rental request `rental-requests.jsp`
+	- Approve `approve.jsp`
+	- Decline `decline.jsp
 - Reports `reports.jsp`
-	- Available cars `available-cars.jsp`
+	- Available cars `available-cars.jsp` 
 	- Rented cars `rented-cars.jsp`
 	- List of Registered users `registered-users.jsp`
 - Feebacks
-
+	-  View enquiries `view-enquiries.jsp`
+	-  Reply enquiries `reply-enquiries.jsp`
+	-  View feedbacks `view-feedbacks.jsp`
 
 Database
 ----------
@@ -68,7 +72,7 @@ Database
 - `dateRequested`
 - `dateFrom`
 - `dateTo`
-- `status` Accepted / Declined
+- `status` Accepted / Declined / Pending
 - `message`
 
 **Staff**
@@ -85,3 +89,6 @@ Database
 - `phone`
 - `pwd`
 - `active` Active / In-Active
+
+Working Directory
+/Users/amolwankhede/Documents/Ntec/Java-Project/RentACar

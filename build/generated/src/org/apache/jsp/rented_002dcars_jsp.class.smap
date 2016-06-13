@@ -1,0 +1,30 @@
+SMAP
+rented_002dcars_jsp.java
+JSP
+*S JSP
+*F
++ 0 rented-cars.jsp
+rented-cars.jsp
++ 1 admin-header.jsp
+admin-header.jsp
++ 2 admin-footer.jsp
+admin-footer.jsp
+*L
+1,41:60
+1#1,47:101
+41#0,19:147
+60,18:167
+77,3:185
+80,6:188,3
+86:206
+87,13:208
+99,5:221
+104,8:227
+111,2:235
+113:237,3
+114,4:240
+118:244,3
+119,7:247
+1#2,63:254
+125#0,10:317
+*E

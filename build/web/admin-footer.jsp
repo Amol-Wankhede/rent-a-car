@@ -24,11 +24,11 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h3>Rental</h3>
+                        <h3>Enquiry / Feedback</h3>
                         <ul>
-                            <li><a href="accept-request.jsp">Accept requests</a></li>
-                            <li><a href="reject-request.jsp">Reject requests</a></li>
-                            <li><a href="view-requests.jsp">View all requests</a></li>
+                            <li><a href="view-enquiries.jsp">View enquiries</a></li>
+                            <li><a href="reply-enquiries.jsp">Reply enquiries</a></li>
+                            <li><a href="view-feedbacks.jsp">View feedbacks</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
@@ -39,7 +39,7 @@
                         <ul>
                             <li><a href="available-cars.jsp">Available cars</a></li>
                             <li><a href="rented-cars.jsp">Rented cars</a></li>
-                            <li><a href="registered-customers.jsp">Registered customers</a></li>
+                            <li><a href="registered-users.jsp">Registered users </a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->

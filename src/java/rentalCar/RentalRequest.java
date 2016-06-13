@@ -16,7 +16,6 @@ public class RentalRequest {
     String dateFrom;
     String dateTo;
     String status;
-    String message;
     int userId;
     String regNo;
 
@@ -62,15 +61,7 @@ public class RentalRequest {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
+    
     public int getUserId() {
         return userId;
     }
