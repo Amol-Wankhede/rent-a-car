@@ -28,7 +28,7 @@
 
 <body>
 
-    <%@ include file="admin-header.jsp" %>  
+    <%--<%@ include file="admin-header.jsp" %>--%>  
 
     <section id="blog" class="container">
         <div class="center">
@@ -37,7 +37,7 @@
         <div class="blog">
             <div class="row">
                 <div class="col-md-offset-3 col-md-8">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="POST" action="admin-loginProcess.jsp">
                       <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-4">
@@ -47,7 +47,7 @@
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                         <div class="col-sm-4">
-                          <input type="password" name="password" class="form-control" placeholder="Password">
+                          <input type="password" name="pwd" class="form-control" placeholder="Password">
                         </div>
                       </div>
                       <div class="form-group">
@@ -62,7 +62,7 @@
         </div>
     </section><!--/#blog-->
 
-    <%@ include file="admin-footer.jsp" %>  
+    <%--<%@ include file="admin-footer.jsp" %>--%>  
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

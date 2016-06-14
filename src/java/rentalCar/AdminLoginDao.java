@@ -19,8 +19,8 @@ import java.util.Arrays;
  *
  * @author Amol Wankhede
  */
+public class AdminLoginDao {
 
-public class LoginDao {
     static String returnString = null;
 
     public static String checkLogin(User bean) {
@@ -28,19 +28,15 @@ public class LoginDao {
             // Get connection object from ConnectionProvider.java
             Connection conn = ConnectionProvider.getConnection();
             // Prepare SQL query
-            PreparedStatement ps = conn.prepareStatement("SELECT * FROM User WHERE email=? AND pwd=?");
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM User, Staff WHERE email=? AND pwd=? AND user.userId = Staff.userId");
 
             ps.setString(1, bean.getEmail());   // set first parameter to email
             ps.setString(2, bean.getPwd()); // set second parameter to password
-
+            System.out.println(bean.getEmail());
+            System.out.println(bean.getPwd());
             ResultSet rs = ps.executeQuery(); // get the result of the SQL query
-            if(rs.next()) {
-                // Result set will contain string in following numbers
-                // 1 - id, 2 - name, 3 - password, 4- email, 5 - country
-                if(rs.getString(8).equals("In-Active"))
-                    returnString = "In-Active";
-                else
-                    returnString = String.valueOf(rs.getInt(1)) + "-" + rs.getString("name").substring(0, rs.getString("name").indexOf(" ")) ;
+            if (rs.next()) {
+                returnString = String.valueOf(rs.getInt("userId")) + "-" + rs.getString("staffType");
             } else {
                 returnString = "error";
             }

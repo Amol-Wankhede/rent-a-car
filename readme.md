@@ -3,29 +3,37 @@ Rent a car
 
 > An online booking application which allows customers to make an online request to rent a car. 
 
+** Static Pages **
+- contact `contact.jsp`
+- about `about.jsp`
+- privacy `privacy.jsp`
+
 **User**
  - user registration `register.jsp` 
  - login `login.jsp`  **DONE**
 	- Correct login `welcome.jsp` **DONE**
 	- Incorrect login `error-login.jsp` **DONE**
  - view cars `view-cars.jsp` **DONE**
- - edit info `update-profile.jsp` 
- - change pwd `change-password.jsp` 
- - forgot password `forgot.jsp` 
- - logout `logout.jsp` **DONE**
-
+ - Profile 
+ 	- view profile `view-profile.jsp`
+ 	- edit profile `edit-profile.jsp` 
+ 		- change pwd `change-password.jsp` 
+ 	- logout `logout.jsp` **DONE**
+- forgot password `forgot.jsp` 
+ 
 **Customer**
 - Enquiry `enquiry.jsp`
 - Feedback `feedback.jsp`
 
 **Admin**
-- Enable disable accounts `maintain-user-accounts.jsp`
-- Maintain customer info `update-customer-info.jsp`
+- User accounts
+	- Enable disable accounts `view-user-accounts.jsp`
+	- Maintain customer info `maintain-customer-info.jsp`
 - Car Infomrmation
 	- Add new car `add-car.jsp`
-	- Modify car `edit-car.jsp`
+	- Modify car `modify-car.jsp`
 		- Show all cars
-		- Select car to remove
+		- Select car to modify
 	- Remove car `remove-car.jsp`
 		- Show all cars
 		- Select car to remove
@@ -61,7 +69,7 @@ Database
 **Enquiry**
 - `enquiryId`
 - `userId`
-- `type`
+- `type` Feedback / Enquiry
 - `message`
 - `status` Pending / Replied / Resolved
 
@@ -90,6 +98,5 @@ Database
 - `pwd`
 - `active` Active / In-Active
 
-Working Directory
-
+Working Directoryπ
 /Users/amolwankhede/Documents/Ntec/Java-Project/RentACar

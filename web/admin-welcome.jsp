@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> Login | Rent A Car</title>
+    <title> Admin Welcome | Rent A Car</title>
     
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,18 +28,22 @@
 
 <body>
 
-    <%@ include file="header.jsp" %>  
+    <%@ include file="admin-header.jsp" %>  
 
     <section id="blog" class="container">
         <div class="center">
-            <h2>Thank you</h2>
-            <h3>You've been successfully logged out.</h3>
-            <%     session.invalidate(); %>
-            <jsp:forward page="index.jsp" />            
+            <h2>Admin - Login process</h2>
+        </div>
+        <div class="blog">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1> Welcome, <%= session.getAttribute("type")%></h1>
+                </div><!--/.col-md-8-->
+            </div><!--/.row-->
         </div>
     </section><!--/#blog-->
 
-    <%@ include file="footer.jsp" %>  
+    <%@ include file="admin-footer.jsp" %>  
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

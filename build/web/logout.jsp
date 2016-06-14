@@ -35,6 +35,7 @@
             <h2>Thank you</h2>
             <h3>You've been successfully logged out.</h3>
             <%     session.invalidate(); %>
+            <jsp:forward page="index.jsp" />            
         </div>
     </section><!--/#blog-->
 

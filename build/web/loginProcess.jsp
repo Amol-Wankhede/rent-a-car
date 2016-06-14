@@ -50,24 +50,28 @@
                     <strong> Error:</strong> Email address or password do not match
                 </div>
                 <%  } // If there is an exception
-                    else if (str == "exception") { %>
+                else if (str == "exception") { %>
                 <div class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <strong> Exception:</strong> Exception in executing SQL query
                 </div>
-                <% } else if (str == "exception") { %>
+                <% } else if (str == "In-Active") { %>
                 <div class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <strong> Alert:</strong> You account has been deactivated by Administrator
                 </div>
-                <% } 
-                    else { %>
+                <% } else { %>
                 <div class="alert alert-success" role="alert">
                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     <strong> Success:</strong> You have been successfully logged-in !
                     <%
                         // Create session by setting session variable username to current user name
-                        session.setAttribute("userid", str);
+                            String[] ary = str.split("-");
+                            session.setAttribute("userid", ary[0]);
+                            session.setAttribute("name", ary[1]);
+                    %>
+                    <jsp:forward page="index.jsp" />
+                    <%
                     }%>
                 </div>                 
             </div>

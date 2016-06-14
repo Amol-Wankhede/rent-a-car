@@ -34,7 +34,7 @@
             <div class="center">
                 <h1>Login Process Page</h1>
                 <%-- Java class used to verify email and password stored in the database --%>
-                <%@page import="rentalCar.LoginDao"%>
+                <%@page import="rentalCar.AdminLoginDao"%>
                 <%-- Java class containing setter and getter methods for all the varibles of database fields --%>
                 <jsp:useBean id="bean" class="rentalCar.User"/>
                 <%-- Create an object of LoginBean  --%>
@@ -42,7 +42,7 @@
 
                 <%
                     //  A string that contains values retured from checkLogin function
-                    String str = LoginDao.checkLogin(bean);
+                    String str = AdminLoginDao.checkLogin(bean);
                     // If there is error
                     if (str == "error") { %>
                 <div class="alert alert-danger" role="alert">
@@ -65,14 +65,13 @@
                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     <strong> Success:</strong> You have been successfully logged-in !
                     <%
-                        // Create session by setting session variable username to current user name
+                            // Create session by setting session variable username to current user name
                             String[] ary = str.split("-");
                             session.setAttribute("userid", ary[0]);
-                            session.setAttribute("name", ary[1]);
+                            session.setAttribute("type", ary[1]);
                     %>
-                    <jsp:forward page="index.jsp" />
-                    <%
-                    }%>
+                        <jsp:forward page="admin-welcome.jsp" />
+                    <% }%>
                 </div>                 
             </div>
         </section><!--/#blog-->
