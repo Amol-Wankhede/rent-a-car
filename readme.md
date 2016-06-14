@@ -5,7 +5,7 @@ Rent a car
 
 **User**
  - user registration `register.jsp` 
- - login `login.jsp` 
+ - login `login.jsp`  **DONE**
 	- Correct login `welcome.jsp` **DONE**
 	- Incorrect login `error-login.jsp` **DONE**
  - view cars `view-cars.jsp` **DONE**
@@ -15,7 +15,6 @@ Rent a car
  - logout `logout.jsp` **DONE**
 
 **Customer**
-- Rent a car `rent-car.jsp`
 - Enquiry `enquiry.jsp`
 - Feedback `feedback.jsp`
 
@@ -33,7 +32,7 @@ Rent a car
 - Rental request `rental-requests.jsp` **DONE**
 	- Approve `approve.jsp` **DONE**
 	- Decline `decline.jsp` **DONE**
-- Reports `reports.jsp`
+- Reports
 	- Available cars `available-cars.jsp` **DONE**
 	- Rented cars `rented-cars.jsp` **DONE**
 	- List of Registered users `registered-users.jsp` **DONE**
