@@ -47,8 +47,7 @@
                     <div class="col-md-12">
                         <% 
                             String error;
-                            if (session.getAttribute("userid") != null) {
-                            try {
+                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) {                             try {
                                 // Get connection object from ConnectionProvider.java
                                 Connection conn = ConnectionProvider.getConnection();
                                 // Prepare SQL query

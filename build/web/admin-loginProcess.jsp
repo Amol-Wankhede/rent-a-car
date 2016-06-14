@@ -69,6 +69,7 @@
                             String[] ary = str.split("-");
                             session.setAttribute("userid", ary[0]);
                             session.setAttribute("type", ary[1]);
+                            session.setAttribute("name", ary[2]);
                     %>
                         <jsp:forward page="admin-welcome.jsp" />
                     <% }%>

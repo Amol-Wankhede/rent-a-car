@@ -36,7 +36,7 @@ public class AdminLoginDao {
             System.out.println(bean.getPwd());
             ResultSet rs = ps.executeQuery(); // get the result of the SQL query
             if (rs.next()) {
-                returnString = String.valueOf(rs.getInt("userId")) + "-" + rs.getString("staffType");
+                returnString = String.valueOf(rs.getInt("userId")) + "-" + rs.getString("staffType")+ "-" + rs.getString("name");
             } else {
                 returnString = "error";
             }

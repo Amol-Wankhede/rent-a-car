@@ -29,7 +29,9 @@ Rent a car
 
 **Admin**
 - User accounts
-	- Enable disable accounts `view-user-accounts.jsp`
+	- Enable disable accounts `view-user-accounts.jsp` **DONE**
+		- Activate `activate.jsp` **DONE**
+		- Deactivate `deactivate.jsp` **DONE**
 	- Maintain customer info `maintain-customer-info.jsp`
 - Car Infomrmation
 	- Add new car `add-car.jsp`

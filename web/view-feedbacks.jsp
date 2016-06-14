@@ -46,7 +46,7 @@
                     <div class="col-md-12">
                         <%
                             String error;
-                            if (session.getAttribute("userid") != null) { %>
+                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) { %>
                         <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>

@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Available Cars | Rent A Car</title>
+        <title>View Users accoounts | Rent A Car</title>
 
         <!-- core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
         <section id="blog" class="container">
             <div class="center">
-                <h2>Available Cars</h2>
+                <h2>Registered Users Accounts</h2>
             </div>
             <div class="blog">
                 <div class="row">
@@ -50,33 +50,38 @@
                         <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>
-                                    <th>Reg No</th>
-                                    <th>Car Type</th>
-                                    <th>Car Image</th>
-                                    <th>Description </th>
-                                    <th>Rental Price</th>
-                                </tr> </thead>
-                                <%
-                                    try {
-                                        // Get connection object from ConnectionProvider.java
-                                        Connection conn = ConnectionProvider.getConnection();
-                                        // Prepare SQL query
-                                        PreparedStatement ps = conn.prepareStatement("SELECT * FROM RentalRequest, Car WHERE RentalRequest.regNo=Car.regNo AND RentalRequest.status NOT LIKE ? AND Car.active NOT LIKE ?");
-
-                                        ps.setString(1, "Accepted");   // set first parameter to email
-                                        ps.setString(2, "In-Active");   // set first parameter to email
-
-                                        ResultSet rs = ps.executeQuery();
-                                        int count = 1;
-                                        while (rs.next()) {%>
-
+                                    <th>name</th>
+                                    <th>email</th>
+                                    <th>address</th>
+                                    <th>city </th>
+                                    <th>phone</th>
+                                    <th>active</th>
+                            </tr> </thead>
+                            <%
+                                try {
+                                    // Get connection object from ConnectionProvider.java
+                                    Connection conn = ConnectionProvider.getConnection();
+                                    String btn="";
+                                    // Prepare SQL query
+                                    PreparedStatement ps = conn.prepareStatement("SELECT * FROM user WHERE userId <> ?");
+                                    ps.setString(1, (String)session.getAttribute("userid"));
+                                    ResultSet rs = ps.executeQuery();
+                                    int count = 1;
+                                    while (rs.next()) {
+                                        if (rs.getString("active").equals("Active")) {
+                                            btn = "<a href='deactivate.jsp?uid=" + rs.getInt("userId") + "' class='btn btn-warning'>Deactivate</a> ";
+                                        } else {
+                                            btn = "<a href='activate.jsp?uid=" + rs.getInt("userId") + "' class='btn btn-info'>Activate</a>";
+                                        }
+                            %>
                             <tr>
                                 <td><%= count++%></td>
-                                <td><%= rs.getString("regNo")%></td>
-                                <td><%= rs.getString("carType")%></td>
-                                <td><img src='<%= rs.getString("carImage")%>' class='img-responsive'></td>
-                                <td><%= rs.getString("description")%></td>
-                                <td>$<%= rs.getString("rentalPrice")%></td>
+                                <td><%= rs.getString("name")%></td>
+                                <td><%= rs.getString("email")%></td>
+                                <td><%= rs.getString("address")%></td>
+                                <td><%= rs.getString("city")%></td>
+                                <td><%= rs.getString("phone")%></td>
+                                <td><%= btn%></td>
                             </tr>
                             <%
                                     }
@@ -94,10 +99,9 @@
                             <strong> Please login: </strong> You must be logged-in to view this page
                         </div>                           
                         <% }%>
-
-                    </div><!--/.col-md-8
+                    </div>
                 </div><!--/.row-->
-                </div>
+            </div>
         </section><!--/#blog-->
 
         <%@ include file="admin-footer.jsp" %>  

@@ -32,12 +32,12 @@
 
     <section id="blog" class="container">
         <div class="center">
-            <h2>Admin - Login process</h2>
+            <h2><%= session.getAttribute("type")%> - Login process</h2>
         </div>
         <div class="blog">
             <div class="row">
                 <div class="col-md-12">
-                    <h1> Welcome, <%= session.getAttribute("type")%></h1>
+                    <h1> Welcome, <%= session.getAttribute("name")%></h1>
                 </div><!--/.col-md-8-->
             </div><!--/.row-->
         </div>
