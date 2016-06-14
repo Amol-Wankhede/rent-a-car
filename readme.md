@@ -14,6 +14,8 @@ Rent a car
 	- Correct login `welcome.jsp` **DONE**
 	- Incorrect login `error-login.jsp` **DONE**
  - view cars `view-cars.jsp` **DONE**
+ 	- book car `book-now.jsp`
+ 		- book `book.jsp`
  - Profile 
  	- view profile `view-profile.jsp`
  	- edit profile `edit-profile.jsp` 
@@ -46,7 +48,7 @@ Rent a car
 	- List of Registered users `registered-users.jsp` **DONE**
 - Feebacks
 	-  View enquiries `view-enquiries.jsp` **DONE**
-	-  Reply enquiries `reply-enquiries.jsp`
+	-  ~~Reply enquiries `reply-enquiries.jsp`~~
 	-  View feedbacks `view-feedbacks.jsp` **DONE**
 
 Database
@@ -98,5 +100,5 @@ Database
 - `pwd`
 - `active` Active / In-Active
 
-Working Directoryπ
+Working Directory
 /Users/amolwankhede/Documents/Ntec/Java-Project/RentACar
