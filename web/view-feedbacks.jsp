@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Registered Users | Rent A Car</title>
+        <title>Feeback | Rent A Car</title>
 
         <!-- core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 
         <section id="blog" class="container">
             <div class="center">
-                <h2>Registered Users </h2>
+                <h2>All Feedbacks </h2>
             </div>
             <div class="blog">
                 <div class="row">
@@ -50,39 +50,35 @@
                         <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>address</th>
-                                    <th>city </th>
-                                    <th>phone</th>
-                                    <th>active</th>
+                                    <th>userId</th>
+                                    <th>type</th>
+                                    <th>message</th>
                                 </tr> </thead>
                                 <%
                                     try {
                                         // Get connection object from ConnectionProvider.java
                                         Connection conn = ConnectionProvider.getConnection();
                                         // Prepare SQL query
-                                        PreparedStatement ps = conn.prepareStatement("SELECT * FROM user");
-
+                                        PreparedStatement ps = conn.prepareStatement("SELECT * FROM Enquiry WHERE type=?");
+                                        ps.setString(1, "Feedback");
                                         ResultSet rs = ps.executeQuery();
                                         int count = 1;
                                         while (rs.next()) {
                                             String statusClass = "";
-                                            if (rs.getString("active").equals("Active")) {
-                                                statusClass = "";
-                                            } else {
-                                                statusClass = "danger";
-                                            }
+//                                            if (rs.getString("status").equals("Pending")) {
+//                                                statusClass = "danger";
+//                                            } else if (rs.getString("status").equals("Replied")) {
+//                                                statusClass = "success";
+//                                            } else {
+//                                                statusClass = "warning";
+//                                            }
                                 %>
 
                             <tr class="<%=statusClass%>">
                                 <td><%= count++%></td>
-                                <td><%= rs.getString("name")%></td>
-                                <td><%= rs.getString("email")%></td>
-                                <td><%= rs.getString("address")%></td>
-                                <td><%= rs.getString("city")%></td>
-                                <td><%= rs.getString("phone")%></td>
-                                <td><%= rs.getString("active")%></td>
+                                <td><%= rs.getString("userId")%></td>
+                                <td><%= rs.getString("type")%></td>
+                                <td><%= rs.getString("message")%></td>
                             </tr>
                             <%
                                     }

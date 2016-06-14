@@ -45,7 +45,10 @@
                         <jsp:useBean id="bean" class="rentalCar.RentalRequest"/>
                         <%-- Create an object of LoginBean  --%>
                         <jsp:setProperty property="*" name="bean"/>                    
-                        <table class="table table-condensed">
+                        <%
+                            if (session.getAttribute("userid") != null) { %>
+
+                        <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>
                                     <th>Action</th>
@@ -58,13 +61,13 @@
                                 </tr> </thead>
                                 <%
                                     ArrayList<RentalRequest> data = GetRentalRequest.getRentalRequestList();
-                                    String statusClass="", btn="";
-                                    int count=1;
+                                    String statusClass = "", btn = "";
+                                    int count = 1;
                                     for (RentalRequest r : data) {
                                         if (r.getStatus().equals("Pending")) {
                                             statusClass = "danger";
-                                            btn = "<a href='accept.jsp?rid=" +r.getRequestId()+ "' class='btn btn-info'>Accept</a> "
-                                                    + "<a href='decline.jsp?rid=" +r.getRequestId()+ "' class='btn btn-warning'>Decline</a>";
+                                            btn = "<a href='accept.jsp?rid=" + r.getRequestId() + "' class='btn btn-info'>Accept</a> "
+                                                    + "<a href='decline.jsp?rid=" + r.getRequestId() + "' class='btn btn-warning'>Decline</a>";
                                         }
                                         if (r.getStatus().equals("Accepted")) {
                                             statusClass = "success";
@@ -72,12 +75,12 @@
                                         }
                                         if (r.getStatus().equals("Declined")) {
                                             statusClass = "warning";
-                                             btn = "DECLINED";
+                                            btn = "DECLINED";
                                         }
                                 %>
                             <tr class="<%=statusClass%>">
-                                <td> <%=count++ %> </td>
-                                <td> <%=btn %> </td>
+                                <td> <%=count++%> </td>
+                                <td> <%=btn%> </td>
                                 <td> <%= r.getRegNo()%></td>
 <!--                                <td> <%= r.getUserId()%></td>-->
                                 <td> <%= r.getRegNo()%></td>
@@ -86,7 +89,13 @@
                                 <td> <%= r.getDateTo()%></td>
                             </tr>
                             <% }%>
-                        </table>
+                        </table> 
+                        <% } else { %>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <strong> Please login: </strong> You must be logged-in to view this page!
+                        </div>                           
+                        <% }%>
                     </div>
                 </div><!--/.row-->
             </div>

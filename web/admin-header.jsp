@@ -31,14 +31,19 @@
                     </li>
                     <li><a href="rental-requests.jsp">Rental requests</a></li>
                     <li><a href="view-enquiries.jsp">Enquiries</a></li>
-                    <li><a href="#">Reports</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Reports <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="available-cars.jsp">Available cars</a></li>
                             <li><a href="rented-cars.jsp">Rented cars</a></li>
                             <li><a href="registered-users.jsp">Registered users </a></li>
                         </ul>
                     </li>                        
+                    <% if (session.getAttribute("userid") != null) { %>
+                    <li><a href="logout.jsp" class="btn btn-primary">Logout</a></li>
+                        <% } else { %>
                     <li><a href="login.jsp" class="btn btn-warning">Login</a></li>
+                        <% }%>
                 </ul>
             </div>
         </div><!--/.container-->

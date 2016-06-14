@@ -47,7 +47,10 @@
             <div class="blog">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-condensed">
+                        <%
+                            String error;
+                            if (session.getAttribute("userid") != null) { %>
+                        <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>
                                     <th>Reg No</th>
@@ -57,24 +60,22 @@
                                     <th>Total Rental</th>
                                 </tr> </thead>
                                 <%
-                                    String error;
-                                    if (session.getAttribute("userid") != null) {
-                                        try {
-                                            // Get connection object from ConnectionProvider.java
-                                            Connection conn = ConnectionProvider.getConnection();
-                                            // Prepare SQL query
-                                            PreparedStatement ps = conn.prepareStatement("SELECT * FROM RentalRequest, Car WHERE RentalRequest.regNo=Car.regNo AND RentalRequest.status LIKE ? AND Car.active NOT LIKE ? AND dateFrom >= ?");
+                                    try {
+                                        // Get connection object from ConnectionProvider.java
+                                        Connection conn = ConnectionProvider.getConnection();
+                                        // Prepare SQL query
+                                        PreparedStatement ps = conn.prepareStatement("SELECT * FROM RentalRequest, Car WHERE RentalRequest.regNo=Car.regNo AND RentalRequest.status LIKE ? AND Car.active NOT LIKE ? AND dateFrom >= ?");
 
-                                            ps.setString(1, "Accepted");   // set first parameter to email
-                                            ps.setString(2, "In-Active"); // set first parameter to email
+                                        ps.setString(1, "Accepted");   // set first parameter to email
+                                        ps.setString(2, "In-Active"); // set first parameter to email
 
-                                            Date date = Calendar.getInstance().getTime();
-                                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                                            ps.setString(3, sdf.format(date));   // set first parameter to email
+                                        Date date = Calendar.getInstance().getTime();
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                                        ps.setString(3, sdf.format(date));   // set first parameter to email
 
-                                            ResultSet rs = ps.executeQuery();
-                                            int count = 1;
-                                            while (rs.next()) {%>
+                                        ResultSet rs = ps.executeQuery();
+                                        int count = 1;
+                                        while (rs.next()) {%>
 
                             <tr>
                                 <td><%= count++%></td>
@@ -113,7 +114,7 @@
                         <% } else { %>
                         <div class="alert alert-danger" role="alert">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            <strong> Please login: </strong> You must be logged-in to book car!
+                            <strong> Please login: </strong> You must be logged-in to view this page
                         </div>                           
                         <% }%>
 

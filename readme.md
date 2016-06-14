@@ -6,13 +6,13 @@ Rent a car
 **User**
  - user registration `register.jsp` 
  - login `login.jsp` 
-	- Correct login `welcome.jsp` 
-	- Incorrect login `error-login.jsp` 
- - view cars `view-cars.jsp` 
+	- Correct login `welcome.jsp` **DONE**
+	- Incorrect login `error-login.jsp` **DONE**
+ - view cars `view-cars.jsp` **DONE**
  - edit info `update-profile.jsp` 
  - change pwd `change-password.jsp` 
  - forgot password `forgot.jsp` 
- - logout `logout.jsp`
+ - logout `logout.jsp` **DONE**
 
 **Customer**
 - Rent a car `rent-car.jsp`
@@ -22,24 +22,25 @@ Rent a car
 **Admin**
 - Enable disable accounts `maintain-user-accounts.jsp`
 - Maintain customer info `update-customer-info.jsp`
-- Add new car `add-car.jsp`
-- Modify car `edit-car.jsp`
-	- Show all cars
-	- Select car to remove
-- Remove car `remove-car.jsp`
-	- Show all cars
-	- Select car to remove
-- Rental request `rental-requests.jsp`
-	- Approve `approve.jsp`
-	- Decline `decline.jsp
+- Car Infomrmation
+	- Add new car `add-car.jsp`
+	- Modify car `edit-car.jsp`
+		- Show all cars
+		- Select car to remove
+	- Remove car `remove-car.jsp`
+		- Show all cars
+		- Select car to remove
+- Rental request `rental-requests.jsp` **DONE**
+	- Approve `approve.jsp` **DONE**
+	- Decline `decline.jsp` **DONE**
 - Reports `reports.jsp`
-	- Available cars `available-cars.jsp` 
-	- Rented cars `rented-cars.jsp`
-	- List of Registered users `registered-users.jsp`
+	- Available cars `available-cars.jsp` **DONE**
+	- Rented cars `rented-cars.jsp` **DONE**
+	- List of Registered users `registered-users.jsp` **DONE**
 - Feebacks
-	-  View enquiries `view-enquiries.jsp`
+	-  View enquiries `view-enquiries.jsp` **DONE**
 	-  Reply enquiries `reply-enquiries.jsp`
-	-  View feedbacks `view-feedbacks.jsp`
+	-  View feedbacks `view-feedbacks.jsp` **DONE**
 
 Database
 ----------
@@ -91,4 +92,5 @@ Database
 - `active` Active / In-Active
 
 Working Directory
+
 /Users/amolwankhede/Documents/Ntec/Java-Project/RentACar

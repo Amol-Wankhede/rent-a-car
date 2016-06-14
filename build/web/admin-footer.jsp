@@ -5,8 +5,8 @@
                     <div class="widget">
                         <h3>Users / Customers</h3>
                         <ul>
-                            <li><a href="view-users.jsp">View user accounts</a></li>
-                            <li><a href="maintain-users.jsp">Maintain customer accounts</a></li>
+                            <li><a href="registered-users.jsp">View user accounts</a></li>
+                            <li><a href="update-customer-info.jsp">Maintain customer accounts</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->
