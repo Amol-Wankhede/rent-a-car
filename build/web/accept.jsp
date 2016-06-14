@@ -48,7 +48,7 @@
                     <div class="col-md-12">
                         <% 
                             String error;
-                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) { %>
+                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) { 
                             try {
                                 // Get connection object from ConnectionProvider.java
                                 Connection conn = ConnectionProvider.getConnection();
@@ -68,6 +68,8 @@
                         %>
                         <h4>Booking accepted</h4>
                         <h4>Email is sent to the customer</h4>
+                        <jsp:forward page="rental-requests.jsp" />
+
                         <% } else { %>
                         <div class="alert alert-danger" role="alert">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>

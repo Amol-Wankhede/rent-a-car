@@ -45,27 +45,30 @@
             <div class="blog">
                 <div class="row">
                     <div class="col-md-12">
-                        <% 
+                        <%
                             String error;
-                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) {                             try {
-                                // Get connection object from ConnectionProvider.java
-                                Connection conn = ConnectionProvider.getConnection();
-                                // Prepare SQL query
-                                PreparedStatement ps = conn.prepareStatement("UPDATE rentalRequest SET status=? WHERE requestId=?");
+                            if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) {
+                                try {
+                                    // Get connection object from ConnectionProvider.java
+                                    Connection conn = ConnectionProvider.getConnection();
+                                    // Prepare SQL query
+                                    PreparedStatement ps = conn.prepareStatement("UPDATE rentalRequest SET status=? WHERE requestId=?");
 
-                                ps.setString(1, "Declined");   // set first parameter to email
-                                ps.setString(2, request.getParameter("rid"));   // set first parameter to email
+                                    ps.setString(1, "Declined");   // set first parameter to email
+                                    ps.setString(2, request.getParameter("rid"));   // set first parameter to email
 
-                                ps.executeUpdate(); // get the result of the SQL query
-                            } catch (Exception ex) {
-                                StringWriter errors = new StringWriter();
-                                ex.printStackTrace(new PrintWriter(errors));
-                                error = "exception" + errors.toString();
-                                out.println(error);
-                            }
+                                    ps.executeUpdate(); // get the result of the SQL query
+                                } catch (Exception ex) {
+                                    StringWriter errors = new StringWriter();
+                                    ex.printStackTrace(new PrintWriter(errors));
+                                    error = "exception" + errors.toString();
+                                    out.println(error);
+                                }
                         %>
                         <h4>Booking declined</h4>
                         <h4>Email is sent to the customer</h4>
+                        <jsp:forward page="rental-requests.jsp" />
+
                         <% } else { %>
                         <div class="alert alert-danger" role="alert">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
