@@ -34,9 +34,9 @@ Rent a car
 		- Deactivate `deactivate.jsp` **DONE**
 	- Maintain customer info `maintain-customer-info.jsp`
 - Car Infomrmation
-	- Add new car `add-car.jsp`
+	- Add new car `add-car.jsp` **DONE**
 		- Upload file and insert data `AddCarProcess.java` Servlet **DONE**
-		- Car added `car-added.jsp`
+		- Car added `car-added.jsp` **DONE**
 	- Modify car `modify-car.jsp`
 		- Show all cars
 		- Select car to modify
