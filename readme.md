@@ -3,7 +3,7 @@ Rent a car
 
 > An online booking application which allows customers to make an online request to rent a car. 
 
-** Static Pages **
+**Static Pages**
 - contact `contact.jsp`
 - about `about.jsp`
 - privacy `privacy.jsp`
@@ -35,6 +35,8 @@ Rent a car
 	- Maintain customer info `maintain-customer-info.jsp`
 - Car Infomrmation
 	- Add new car `add-car.jsp`
+		- Upload file and insert data `AddCarProcess.java` Servlet **DONE**
+		- Car added `car-added.jsp`
 	- Modify car `modify-car.jsp`
 		- Show all cars
 		- Select car to modify

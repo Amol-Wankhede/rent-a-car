@@ -7,3 +7,9 @@ https://www.thrifty.co.nz/
 https://www.budget.co.nz/
 
 https://www.vroomvroomvroom.co.nz/
+
+
+StringWriter errors = new StringWriter();
+ex.printStackTrace(new PrintWriter(errors));
+error = "exception" + errors.toString();
+out.println(error);

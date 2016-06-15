@@ -25,7 +25,7 @@ h6 {
 
 h1{
   font-size: 36px;
-  color:#fff;
+  /*color:#fff;*/
 }
 
 h2{
@@ -2541,8 +2541,4 @@ shortcodes page css
     border: 1px dotted #000000;
     padding: 10px;
     margin: 10px;
-}
-
-.blog H1 {
-  color:#4e4e4e;
 }
