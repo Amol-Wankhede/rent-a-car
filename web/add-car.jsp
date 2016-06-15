@@ -28,7 +28,7 @@
 
     <body>
 
-        <%@ include file="header.jsp" %>  
+        <%@ include file="admin-header.jsp" %>  
 
         <section id="blog" class="container">
             <div class="center">
@@ -37,6 +37,7 @@
             <div class="blog">
                 <div class="row">
                     <div class="col-md-offset-3 col-md-8">
+                        <%  if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) { %>
                         <form class="form-horizontal" method="POST" action="AddCarProcess" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Registration Number</label>
@@ -93,12 +94,18 @@
                                 </div>
                             </div>
                         </form>  
+                        <% } else { %>
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                            <strong> Please login: </strong> You must be logged-in to view this page
+                        </div>                           
+                        <% }%>
                     </div><!--/.col-md-8-->
                 </div><!--/.row-->
             </div>
         </section><!--/#blog-->
 
-        <%@ include file="footer.jsp" %>  
+        <%@ include file="admin-footer.jsp" %>  
 
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
