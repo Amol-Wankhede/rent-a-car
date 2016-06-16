@@ -45,7 +45,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Book a car</h1>
                                     <h2 class="animation animated-item-2">Reliable way to travel</h2>
-                                    <a class="btn-slide animation animated-item-3" href="booknow.html">Book Now</a>
+                                    <a class="btn-slide animation animated-item-3" href="view-cars.jsp?cars=all">View Cars</a>
                                 </div>
                             </div>
 
@@ -65,7 +65,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Save Time</h1>
                                     <h2 class="animation animated-item-2">Save time when you arrive!</h2>
-                                    <a class="btn-slide animation animated-item-3" href="booknow.html">Book Now</a>
+                                    <a class="btn-slide animation animated-item-3" href="view-cars.jsp?cars=all">View Cars</a>
                                 </div>
                             </div>
 
@@ -85,7 +85,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Get Started</h1>
                                     <h2 class="animation animated-item-2">Rent for long term</h2>
-                                    <a class="btn-slide animation animated-item-3" href="booknow.html">Book Now</a>
+                                    <a class="btn-slide animation animated-item-3" href="view-cars.jsp?cars=all">View Cars</a>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
@@ -104,7 +104,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Special cars</h1>
                                     <h2 class="animation animated-item-2">Starting for $20 per day</h2>
-                                    <a class="btn-slide animation animated-item-3" href="booknow.html">Book Now</a>
+                                    <a class="btn-slide animation animated-item-3" href="view-cars.jsp?cars=all">View Cars</a>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">

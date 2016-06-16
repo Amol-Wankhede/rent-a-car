@@ -32,17 +32,21 @@ Rent a car
 	- Enable disable accounts `view-user-accounts.jsp` **DONE**
 		- Activate `activate.jsp` **DONE**
 		- Deactivate `deactivate.jsp` **DONE**
-	- Maintain customer info `maintain-customer-info.jsp`
-- Car Infomrmation
+	- Maintain customer info 
+		- Show all customers `maintain-customer-info.jsp`
+		- Modify customer info `modify-customer-info.jsp`
+		- Modification done `modified-customer.jsp`
+- Car Information
 	- Add new car `add-car.jsp` **DONE**
 		- Upload file and insert data `AddCarProcess.java` Servlet **DONE**
 		- Car added `car-added.jsp` **DONE**
-	- Modify car `modify-car.jsp`
+	- Modify car 
+		- Show all cars `modify-car-select.jsp` **DONE**
+		- Modify car info `modify-car.jsp` **DONE**
+		- Modification done `modified-car.jsp`
+	- Remove car `remove-car.jsp` **DONE**
 		- Show all cars
-		- Select car to modify
-	- Remove car `remove-car.jsp`
-		- Show all cars
-		- Select car to remove
+		- Select car to remove (RECURSIVE)
 - Rental request `rental-requests.jsp` **DONE**
 	- Approve `approve.jsp` **DONE**
 	- Decline `decline.jsp` **DONE**
@@ -50,7 +54,7 @@ Rent a car
 	- Available cars `available-cars.jsp` **DONE**
 	- Rented cars `rented-cars.jsp` **DONE**
 	- List of Registered users `registered-users.jsp` **DONE**
-- Feebacks
+- Feedbacks
 	-  View enquiries `view-enquiries.jsp` **DONE**
 	-  ~~Reply enquiries `reply-enquiries.jsp`~~
 	-  View feedbacks `view-feedbacks.jsp` **DONE**
