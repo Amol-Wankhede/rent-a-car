@@ -7,7 +7,7 @@
                     <h3>Cars info</h3>
                     <ul>
                         <li><a href="add-car.jsp">Add car info</a></li>
-                        <li><a href="modify-car.jsp">Modify car info</a></li>
+                        <li><a href="modify-car-select.jsp">Modify car info</a></li>
                         <li><a href="remove-car.jsp">Remove car info</a></li>
                     </ul>
                 </div>    

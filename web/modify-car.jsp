@@ -64,11 +64,11 @@
                                 }
                                 if (rs.next()) {
                         %>
-                        <form class="form-horizontal" method="POST" action="AddCarProcess" enctype="multipart/form-data">
+                        <form class="form-horizontal" method="POST" action="ModifyCarProcess" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Registration Number</label>
                                 <div class="col-sm-4">
-                                    <input type="text" name="regNo" class="form-control" value="<%=rs.getString("regNo")%>">
+                                    <input type="text" name="regNo" class="form-control" value="<%=rs.getString("regNo")%>" readonly="readonly">
                                 </div>
                             </div>
                             <div class="form-group">

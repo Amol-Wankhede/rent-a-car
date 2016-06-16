@@ -28,7 +28,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Cars info <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="add-car.jsp">Add car info</a></li>
-                            <li><a href="modify-car.jsp">Modify car info</a></li>
+                            <li><a href="modify-car-select.jsp">Modify car info</a></li>
                             <li><a href="remove-car.jsp">Remove car info</a></li>
                         </ul>
                     </li>

@@ -1,4 +1,11 @@
-<%@page import="java.util.Enumeration"%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.io.StringWriter"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="rentalCar.ConnectionProvider"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,20 +43,48 @@
                 <h2>Book</h2>
                 <p class="lead">Booking process</p>
             </div>
-            <jsp:useBean id="bean" class="rentalCar.RentalRequest"/>
             <div class="blog">
                 <div class="row">
                     <div class="col-md-12">
-                        <% if (session.getAttribute("userid") != null) {%>
-                       <!--  <%= request.getParameter("from")%><br>
-                        <%= request.getParameter("days")%><br>
-                        <%= request.getParameter("rent")%><br>
-                        <%= request.getParameter("totalrent")%><br> -->
-                        <jsp:setProperty name="bean" property="userId" value="10"/>
-                        <jsp:setProperty name="bean" property="dateFrom" value="10"/>
-                        <jsp:setProperty name="bean" property="userId" value="10"/>
-                        <jsp:setProperty name="bean" property="regNo" value="10"/>
+                        <% if (session.getAttribute("userid") != null) {
+                                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                                Date fromDate = formatter.parse(request.getParameter("from"));
 
+                                int days = Integer.parseInt(request.getParameter("days"));
+                                long toDateMilliSeconds = fromDate.getTime()
+                                        + (days * 24 * 60 * 60 * 1000);
+
+                                Date toDate = new Date(toDateMilliSeconds);
+                                String toDateStr = formatter.format(toDate);
+                                String fromDateStr = formatter.format(fromDate);
+
+                                Date now = new Date();
+                                String nowStr = formatter.format(now);
+
+                                try {
+                                    // Get connection object from ConnectionProvider.java
+                                    Connection conn = ConnectionProvider.getConnection();
+                                    // Prepare SQL query
+                                    PreparedStatement ps = conn.prepareStatement("INSERT INTO "
+                                            + "RentalRequest (userId, regNo, dateRequested, dateFrom, dateTo, status) "
+                                            + "VALUES (?, ?, ?, ?, ?, ?) ");
+
+                                    ps.setString(1, session.getAttribute("userid").toString());
+                                    ps.setString(2, request.getParameter("regNo"));
+                                    ps.setString(3, nowStr);
+                                    ps.setString(4, fromDateStr);
+                                    ps.setString(5, toDateStr);
+                                    ps.setString(6, "Pending");
+
+                                    ps.executeUpdate(); // get the result of the SQL query
+                                } catch (SQLException ex) {
+                                    String error;
+                                    StringWriter errors = new StringWriter();
+                                    ex.printStackTrace(new PrintWriter(errors));
+                                    error = "exception" + errors.toString();
+                                    out.println(error);
+                                }
+                        %>
                         <h4>Your booking has been submitted to the company</h4>
                         <h4>Once approved you will receive email</h4>
                         <% } else { %>

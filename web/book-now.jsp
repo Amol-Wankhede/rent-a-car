@@ -59,8 +59,9 @@
                                     <label>Number of days</label>
                                     <div class='input-group'>
                                         <select id="days" name="days" class="form-control">
-                                            <% for(int a=1;a<=10;a++)
-                                                out.print("<option value='" + a + "'>" + a + "</option>");
+                                            <% for (int a = 1; a <= 10; a++) {
+                                                    out.print("<option value='" + a + "'>" + a + "</option>");
+                                                }
                                             %>
                                         </select>
                                     </div>
@@ -78,6 +79,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type='hidden' name="regNo" value="<%= request.getParameter("id")%>" /> 
+
                             <div class="row">
                                 <div class="col-md-3">
                                     <!--<a href="book.jsp" class="btn btn-secondary">Confirm Booking </a>-->
@@ -100,22 +103,22 @@
     <script src="js/wow.min.js"></script>
     <!--<script src="js/bootstrap-datetimepicker.js"></script>-->
     <script type="text/javascript">
-    // $(function() {
-    //     var now = moment();
-    //     console.log(now.date());
-    //     console.log(now.month());
-    //     console.log(now.year());
-    //     $("#dateFrom").attr( {
-    //         "min": now.year() + "-" + (now.month()+2) + "-" +now.date()
-    //     });
-    // });
-    // Change the total rent if number of days are changed
-    $("#days").change(function(event) {
-        // console.log($("#days").val());
-        // console.log("total",  $("#days").val() * $("#rent").val() );
-        //  total rent = days * rent per day
-        $("#totalrent").val( $("#days").val() * $("#rent").val() )
-    });
+        // $(function() {
+        //     var now = moment();
+        //     console.log(now.date());
+        //     console.log(now.month());
+        //     console.log(now.year());
+        //     $("#dateFrom").attr( {
+        //         "min": now.year() + "-" + (now.month()+2) + "-" +now.date()
+        //     });
+        // });
+        // Change the total rent if number of days are changed
+        $("#days").change(function (event) {
+            // console.log($("#days").val());
+            // console.log("total",  $("#days").val() * $("#rent").val() );
+            //  total rent = days * rent per day
+            $("#totalrent").val($("#days").val() * $("#rent").val())
+        });
     </script>
 </body>
 </html>

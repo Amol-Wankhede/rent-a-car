@@ -49,13 +49,12 @@
                         <table class="table table-condensed table-bordered">
                             <thead> <tr>
                                     <th>#</th>
-                                    <th>Action</th>
-                                    <th>requestId</th>
                                     <th>regNo</th>
                                     <th>dateRequested</th>
                                     <th>dateFrom</th>
                                     <th>dateTo</th>
                                     <th>userId</th>
+                                    <th>Action</th>
                                 </tr> </thead>
                                 <%
                                     ArrayList<RentalRequest> data = GetRentalRequest.getRentalRequestList();
@@ -78,13 +77,12 @@
                                 %>
                             <tr class="<%=statusClass%>">
                                 <td> <%=count++%> </td>
-                                <td> <%=btn%> </td>
-                                <td> <em><%= r.getRequestId()%></em></td>
                                 <td> <%= r.getRegNo()%></td>
                                 <td> <%= r.getDateRequested()%></td>
                                 <td> <%= r.getDateFrom()%></td>
                                 <td> <%= r.getDateTo()%></td>
                                 <td> <%= r.getUserId()%></td>
+                                <td> <%=btn%> </td>
                             </tr>
                             <% }%>
                         </table> 

@@ -14,8 +14,8 @@ Rent a car
 	- Correct login `welcome.jsp` **DONE**
 	- Incorrect login `error-login.jsp` **DONE**
  - view cars `view-cars.jsp` **DONE**
- 	- book car `book-now.jsp`
- 		- book `book.jsp`
+ 	- book car `book-now.jsp` **DONE**
+ 		- book `book.jsp` **DONE**
  - Profile 
  	- view profile `view-profile.jsp`
  	- edit profile `edit-profile.jsp` 
@@ -33,8 +33,8 @@ Rent a car
 		- Activate `activate.jsp` **DONE**
 		- Deactivate `deactivate.jsp` **DONE**
 	- Maintain customer info 
-		- Show all customers `maintain-customer-info.jsp`
-		- Modify customer info `modify-customer-info.jsp`
+		- Show all customers `maintain-customer-info.jsp` **DONE**
+		- Modify customer info `update-customer.jsp`
 		- Modification done `modified-customer.jsp`
 - Car Information
 	- Add new car `add-car.jsp` **DONE**
@@ -43,7 +43,8 @@ Rent a car
 	- Modify car 
 		- Show all cars `modify-car-select.jsp` **DONE**
 		- Modify car info `modify-car.jsp` **DONE**
-		- Modification done `modified-car.jsp`
+		- Update car info `ModifyCarProcess.jsp` **DONE**
+		- Modification done `car-modified.jsp`
 	- Remove car `remove-car.jsp` **DONE**
 		- Show all cars
 		- Select car to remove (RECURSIVE)
