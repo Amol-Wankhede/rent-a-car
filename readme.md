@@ -109,5 +109,14 @@ Database
 - `pwd`
 - `active` Active / In-Active
 
+
+Validation done on 
+----------
+
+- http://localhost:8080/rentalCar/admin-login.jsp
+- http://localhost:8080/rentalCar/add-car.jsp
+- http://localhost:8080/rentalCar/book-now.jsp?id=EPS-1890
+
+
 Working Directory
 /Users/amolwankhede/Documents/Ntec/Java-Project/RentACar

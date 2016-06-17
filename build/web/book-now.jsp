@@ -42,7 +42,7 @@
                 <%
                     Car c = BookCarDao.bookCar(bean, request.getParameter("id"));
                 %>
-                <form action="book.jsp" method="post">
+                <form action="book.jsp" method="post" >
                     <div class="row car-details">
                         <div class="col-md-3">
                             <%  out.println("<img class='img-responsive' src='" + c.getCarImage() + "'>");%>
@@ -52,13 +52,14 @@
                                 <div class="form-group col-md-3">
                                     <label>Date From</label>
                                     <div class='input-group date'>
-                                        <input type='date' name="from" id="dateFrom" class="form-control" />
+                                        <input type='date' name="from" id="dateFrom" class="form-control" required/>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Number of days</label>
                                     <div class='input-group'>
-                                        <select id="days" name="days" class="form-control">
+                                        <select id="days" name="days" class="form-control" required>
+                                            <option selected disabled="disabled"> - Days - </option>
                                             <% for (int a = 1; a <= 10; a++) {
                                                     out.print("<option value='" + a + "'>" + a + "</option>");
                                                 }
@@ -84,7 +85,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <!--<a href="book.jsp" class="btn btn-secondary">Confirm Booking </a>-->
-                                    <input type="submit" class="btn btn-secondary" value="Confirm Booking" />
+                                    <input type="submit" class="btn btn-info" value="Confirm Booking" />
                                 </div>
                             </div>
                         </div>
@@ -101,6 +102,8 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/validator.js"></script>
+    
     <!--<script src="js/bootstrap-datetimepicker.js"></script>-->
     <script type="text/javascript">
         // $(function() {

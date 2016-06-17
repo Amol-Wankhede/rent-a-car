@@ -38,11 +38,11 @@
                 <div class="row">
                     <div class="col-md-offset-3 col-md-8">
                         <%  if (session.getAttribute("type").equals("Staff") || session.getAttribute("type").equals("Admin")) { %>
-                        <form class="form-horizontal" method="POST" action="AddCarProcess" enctype="multipart/form-data">
+                        <form class="form-horizontal" method="POST" action="AddCarProcess" enctype="multipart/form-data" data-toggle="validator">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Registration Number</label>
                                 <div class="col-sm-4">
-                                    <input type="text" name="regNo" class="form-control" placeholder="Car licenece number">
+                                    <input type="text" name="regNo" class="form-control" placeholder="Car licenece number" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -57,11 +57,12 @@
                                         <option>Premium</option>
                                     </select>
                                 </div>
+                            <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Description</label>
                                 <div class="col-sm-4">
-                                    <textarea name="description" rows="3" class="form-control"> </textarea>
+                                    <textarea name="description" rows="3" class="form-control" required> </textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -69,24 +70,26 @@
                                 <div class="col-sm-4">
                                     <div class="input-group">
                                         <div class="input-group-addon">$</div>
-                                        <input type="text" name="rentalPrice" class="form-control" placeholder="Price"></div>
+                                        <input type="number" name="rentalPrice" class="form-control" placeholder="Price" required></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Status</label>
                                 <div class="col-sm-4">
-                                    <select class='form-control' name="active">
+                                    <select class='form-control' name="active" required>
                                         <option selected="true" disabled="disabled">- Select -</option>
                                         <option>Active</option>
                                         <option>In-Active</option>
                                     </select>                                
                                 </div>
+                            <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-3 control-label">Car image</label>
                                 <div class="col-sm-4">
-                                    <input type="file" name="carImage" class="form-control" placeholder="Email">
+                                    <input type="file" name="carImage" class="form-control" required>
                                 </div>
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-4">
@@ -113,5 +116,6 @@
         <script src="js/jquery.isotope.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/wow.min.js"></script>
+        <script src="js/validator.js"></script>
     </body>
 </html>
