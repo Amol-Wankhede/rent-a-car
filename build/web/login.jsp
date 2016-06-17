@@ -37,17 +37,17 @@
         <div class="blog">
             <div class="row">
                 <div class="col-md-offset-3 col-md-8">
-                    <form class="form-horizontal" method="POST" action="loginProcess.jsp">
+                    <form class="form-horizontal" method="POST" action="loginProcess.jsp" data-toggle="validator">
                       <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-4">
-                          <input type="email" name="email" class="form-control" placeholder="Email">
+                          <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                         <div class="col-sm-4">
-                          <input type="password" name="pwd" class="form-control" placeholder="Password">
+                          <input type="password" name="pwd" class="form-control" placeholder="Password" required>
                         </div>
                       </div>
                       <div class="form-group">
@@ -70,5 +70,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/validator.js"></script>
 </body>
 </html>

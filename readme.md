@@ -44,7 +44,7 @@ Rent a car
 		- Show all cars `modify-car-select.jsp` **DONE**
 		- Modify car info `modify-car.jsp` **DONE**
 		- Update car info `ModifyCarProcess.jsp` **DONE**
-		- Modification done `car-modified.jsp`
+		- Modification done `car-modified.jsp` **DONE**
 	- Remove car `remove-car.jsp` **DONE**
 		- Show all cars
 		- Select car to remove (RECURSIVE)
@@ -110,13 +110,3 @@ Database
 - `active` Active / In-Active
 
 
-Validation done on 
-----------
-
-- http://localhost:8080/rentalCar/admin-login.jsp
-- http://localhost:8080/rentalCar/add-car.jsp
-- http://localhost:8080/rentalCar/book-now.jsp?id=EPS-1890
-
-
-Working Directory
-/Users/amolwankhede/Documents/Ntec/Java-Project/RentACar
